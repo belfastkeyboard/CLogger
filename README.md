@@ -1,10 +1,10 @@
 # C Logger
 
 Simple logger functionality for C. 
-It provides basic logging functionality with different log levels.
 
 ## Features
 - Multiple log levels: DEBUG, INFO, WARN, ERROR, FATAL
+- Write to file or to stdout
 - Logs messages to file in this format: ```[TIME] [LOG LEVEL]: MESSAGE```.
 
 ## Usage
@@ -40,7 +40,7 @@ To configure the logger settings call ```logger_init()```.
 ```c
 void logger_init(const char *filepath, // NULL to write to stdout
                  LoggerMode mode,      // LOGGER_LEVEL_TRUNC to clear log file before writing
-                 LoggerLevel level)    // Specify the minimum level to log e.g. LOGGER_LEVEL_ERROR will not write on a kog_info() call
+                 LoggerLevel level)    // Specify the minimum level to log e.g. LOGGER_LEVEL_ERROR will not write on a log_info() call
 ```
 
 ### 5. Log Messages
